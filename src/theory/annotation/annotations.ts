@@ -1,5 +1,5 @@
 //primitives
-let nothingMush: null = null;
+export let nothingMush: null = null;
 let nothing: undefined = undefined;
 let now: Date = new Date();
 let truths: boolean[] = [false, true, false]

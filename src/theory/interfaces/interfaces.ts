@@ -1,4 +1,4 @@
-interface Reportable {
+export interface Reportable {
     summary():string
 }
 
