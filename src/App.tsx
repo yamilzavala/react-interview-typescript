@@ -4,7 +4,8 @@ import Form from './react-hook-form/zod/Form';
 import AppFcWithTs from './theory/FC-with-ts/AppFcWithTs';
 import EventComponent from './theory/FC-with-ts/components/EventComponent';
 import GuestList from './theory/FC-with-ts/components/GuestList';
-import AppGoals from './theory/fundamentalsComponet-maximilian/AppGoals';
+import AppAdvancedComponents from './theory/maximilian/advanced-components-maximilian/AppAdvancedComponents';
+import AppGoals from './theory/maximilian/fundamentals-components-maximilian/AppGoals';
 import AppTodo from './todo-task/AppTodo';
 import AppTypeofKeyof from './typeof-keyof/AppTypeofKeyof';
 import AppTs from './typescript-in-react/AppTs';
@@ -21,7 +22,10 @@ function App() {
       {/* <AppFcWithTs/> */}
       {/* <GuestList/> */}
       {/* <EventComponent/> */}
-      <AppGoals/>
+
+      {/* maximilian */}
+      {/* <AppGoals/> */}
+      <AppAdvancedComponents/>
     </div>
   );
 }
