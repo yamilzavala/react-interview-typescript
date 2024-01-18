@@ -27,19 +27,16 @@ const AppGoals = () => {
         setGoals(goals.filter(currentGoal => currentGoal.id !== id))
     }
 
-    return (
-        <>
-            <Header image={{src: imageUrl, alt: 'some img desc'}}>
-                <h1>Your course goals</h1>    
-            </Header>
+     return ( 
+            <main>
+                <Header image={{src: imageUrl, alt: 'some img desc'}}>
+                    <h1>Your course goals</h1>    
+                </Header>
 
-            <CourseGoalForm                 
-                handleAddGoal={handleAddGoal} 
-            />
+                <CourseGoalForm handleAddGoal={handleAddGoal} />
 
-            <CourseGoalList goals={goals} handleDelete={handleDelete}/>
-
-        </>
+                <CourseGoalList goals={goals} handleDelete={handleDelete}/>
+            </main>
     );
 };
 
