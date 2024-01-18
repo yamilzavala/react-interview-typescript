@@ -1,35 +1,30 @@
 import React, {useState} from 'react';
-import CourseGoals from './components/CourseGoals';
 import Header from './components/Header';
+import CourseGoalList from './components/CourseGoalList';
+import CourseGoalForm from './components/CourseGoalForm';
 //import goals from '../../assets/goals.jpeg'
 
-type TCourseGoal = {
+export type TCourseGoal = {
     description: string,
     title: string,
-    id: number
+    id?: number
 }
 
 const AppGoals = () => {
     const [goals, setGoals] = useState<TCourseGoal[]>([])
-    const [goalDescription, setGoalDescription] = useState<string>()
-    const [goalTitle, setGoalTitle] = useState<string>()
     const imageUrl = `/assets/goals.jpeg`
 
-    const handleAddGoal = () => {
-        if (goalDescription && goalTitle) {
-            setGoals([
-                ...goals, 
-                {
-                    id: Math.random(),
-                    title: goalTitle,
-                    description: goalDescription
-                }
-            ])
-            }            
+    const handleAddGoal = (goal: TCourseGoal) => {     
+        const newGoal = {
+            ...goal,
+            id: Math.random()
         }
 
-    const handleDelete = () => {
-        console.log('delete fc')
+        setGoals([...goals, newGoal])  
+    }   
+
+    const handleDelete = (id: number) => {
+        setGoals(goals.filter(currentGoal => currentGoal.id !== id))
     }
 
     return (
@@ -38,15 +33,12 @@ const AppGoals = () => {
                 <h1>Your course goals</h1>    
             </Header>
 
-            <input placeholder='description' value={goalDescription} onChange={(e) => setGoalDescription(e.target.value)}/>
-            <input placeholder='title' value={goalTitle} onChange={(e) => setGoalTitle(e.target.value)}/>
-            <button onClick={handleAddGoal}>Add goal</button>
+            <CourseGoalForm                 
+                handleAddGoal={handleAddGoal} 
+            />
 
-            {goals.map((goal,idx) => (
-                <p key={idx}>{goal.title} - {goal.description} - {goal.id}</p>
-            ))}
+            <CourseGoalList goals={goals} handleDelete={handleDelete}/>
 
-            <CourseGoals title='some title' description='some desc' deleteFc={handleDelete} />
         </>
     );
 };

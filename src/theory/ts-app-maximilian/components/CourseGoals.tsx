@@ -1,21 +1,21 @@
 import React from 'react';
+import { TCourseGoal } from '../AppGoals';
 
 //type TCourseGoalsProps = React.PropsWithChildren & {
 type TCourseGoalsProps = {
-    title: string,
-    description: string,
-    deleteFc:() => void,
+    goal: TCourseGoal,
+    deleteFc:(id: number) => void,
     //children: React.ReactNode
 }
 
-const CourseGoals: React.FC<TCourseGoalsProps> = ({title, description, deleteFc}) => {
+const CourseGoals: React.FC<TCourseGoalsProps> = ({goal, deleteFc}) => {
     return (
         <article>
             <div>
-                <h2>{title}</h2>
-                <p>{description}</p>
+                <h2>{goal.title}</h2>
+                <p>{goal.description}</p>
             </div>
-            <button onClick={deleteFc}>delete</button>   
+            <button onClick={() => deleteFc(goal.id!)}>delete</button>   
             {/* {children}          */}
         </article>
     );
