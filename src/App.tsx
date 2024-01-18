@@ -4,7 +4,7 @@ import Form from './react-hook-form/zod/Form';
 import AppFcWithTs from './theory/FC-with-ts/AppFcWithTs';
 import EventComponent from './theory/FC-with-ts/components/EventComponent';
 import GuestList from './theory/FC-with-ts/components/GuestList';
-import AppGoals from './theory/ts-app-maximilian/AppGoals';
+import AppGoals from './theory/fundamentalsComponet-maximilian/AppGoals';
 import AppTodo from './todo-task/AppTodo';
 import AppTypeofKeyof from './typeof-keyof/AppTypeofKeyof';
 import AppTs from './typescript-in-react/AppTs';
