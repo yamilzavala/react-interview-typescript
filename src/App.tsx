@@ -6,6 +6,7 @@ import EventComponent from './theory/FC-with-ts/components/EventComponent';
 import GuestList from './theory/FC-with-ts/components/GuestList';
 import AppAdvancedComponents from './theory/maximilian/advanced-components-maximilian/AppAdvancedComponents';
 import AppContextApiUseReducer from './theory/maximilian/contextApi-useReducer/AppContextApiUseReducer';
+import AppDataFetching from './theory/maximilian/data-fetching/AppDataFetching';
 import AppGoals from './theory/maximilian/fundamentals-components-maximilian/AppGoals';
 import AppTodo from './todo-task/AppTodo';
 import AppTypeofKeyof from './typeof-keyof/AppTypeofKeyof';
@@ -27,7 +28,8 @@ function App() {
       {/* maximilian */}
       {/* <AppGoals/> */}
       {/* <AppAdvancedComponents/> */}
-      <AppContextApiUseReducer/>
+      {/* <AppContextApiUseReducer/> */}
+      <AppDataFetching/>
     </div>
   );
 }
