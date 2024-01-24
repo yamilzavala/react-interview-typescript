@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import 'bootswatch/dist/yeti/bootstrap.min.css'
-import './indexFetchingData.css'
+import './indexRedux.css'
+// import './indexFetchingData.css'
 // import './indexContextApiAndUseReducer.css'
 // import './indexAdvancedComponents.css'
 // import './indexCourseGoal.css'

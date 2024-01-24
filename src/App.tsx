@@ -8,6 +8,7 @@ import AppAdvancedComponents from './theory/maximilian/advanced-components-maxim
 import AppContextApiUseReducer from './theory/maximilian/contextApi-useReducer/AppContextApiUseReducer';
 import AppDataFetching from './theory/maximilian/data-fetching/AppDataFetching';
 import AppGoals from './theory/maximilian/fundamentals-components-maximilian/AppGoals';
+import AppRedux from './theory/maximilian/redux-with-ts/AppRedux';
 import AppTodo from './todo-task/AppTodo';
 import AppTypeofKeyof from './typeof-keyof/AppTypeofKeyof';
 import AppTs from './typescript-in-react/AppTs';
@@ -29,7 +30,8 @@ function App() {
       {/* <AppGoals/> */}
       {/* <AppAdvancedComponents/> */}
       {/* <AppContextApiUseReducer/> */}
-      <AppDataFetching/>
+      {/* <AppDataFetching/> */}
+      <AppRedux/>
     </div>
   );
 }
